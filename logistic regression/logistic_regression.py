@@ -47,13 +47,3 @@ plt.scatter(
 )
 
 plt.show()
-
-weights = logistic_regression(
-    simulated_separableish_features,
-    simulated_labels,
-    num_steps=10000,
-    learning_rate=1e-4,
-    add_intercept=True,
-)
-
-print(weights)
