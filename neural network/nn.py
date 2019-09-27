@@ -88,7 +88,7 @@ class NeuralNetwork(object):
 
 			# Print training status
 			if verbose == 1:
-				print 'EPOCH: {0:4d}/{1:4d}\t\tLearning rate: {2:4f}\t\tElapse time [seconds]: {3:5f}'.format(k,epochs,learning_rate, time.time() - startTime)
+				print ('EPOCH: {0:4d}/{1:4d}\t\t'.format(k,epochs))
 				
 			# Learning rate update
 			learning_rate = learning_rate * (1 - learning_rate_decay)
