@@ -4,29 +4,6 @@ import time
 class NeuralNetwork(object):
 
 	def __init__(self, inputs, hidden, outputs, activation='tanh', output_act='softmax'):
-		
-		if activation == 'sigmoid':
-			self.activation = sigmoid
-			self.activation_prime = sigmoid_prime
-		elif activation == 'tanh':
-			self.activation = tanh
-			self.activation_prime = tanh_prime
-		elif activation == 'linear':
-			self.activation = linear
-			self.activation_prime = linear_prime
-
-		if output_act == 'sigmoid':
-			self.output_act = sigmoid
-			self.output_act_prime = sigmoid_prime
-		elif output_act == 'tanh':
-			self.output_act = tanh
-			self.output_act_prime = tanh_prime
-		elif output_act == 'linear':
-			self.output_act = linear
-			self.output_act_prime = linear_prime
-		elif output_act == 'softmax':
-			self.output_act = softmax
-			self.output_act_prime = softmax_prime
 
 		self.wi = np.random.randn(inputs, hidden)/np.sqrt(inputs)
 		self.wo = np.random.randn(hidden + 1, outputs)/np.sqrt(hidden)
